@@ -2,10 +2,10 @@ export default function Home() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="max-w-2xl mx-auto p-8 text-center">
-        <h1 className="text-5xl font-bold text-gray-900 mb-4">
+        <h1 className="text-5xl font-bold text-red-600 mb-4">
           Outfit App
         </h1>
-        <p className="text-xl text-gray-600 mb-8">
+        <p className="text-xl text-red-500 mb-8">
           A minimal Next.js starter with TypeScript and Tailwind CSS
         </p>
         <div className="space-x-4">
