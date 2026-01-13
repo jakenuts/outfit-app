@@ -24,4 +24,4 @@ When starting work:
 - Framework: Next.js 15 with TypeScript
 - Styling: Tailwind CSS
 - Package Manager: pnpm
-- Vercel CLI is auto-installed via startup hook
+- Vercel CLI and GitHub CLI are auto-installed via startup hook
