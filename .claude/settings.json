@@ -1,0 +1,11 @@
+{
+  "instructions": ".claude/instructions.md",
+  "hooks": {
+    "startup": [
+      {
+        "command": "bash",
+        "args": [".claude/startup.sh"]
+      }
+    ]
+  }
+}

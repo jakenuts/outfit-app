@@ -1,0 +1,39 @@
+name: Merge Claude branches to dev
+
+on:
+  push:
+    branches:
+      - 'claude/**'
+
+jobs:
+  merge-to-dev:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Merge to dev
+        run: |
+          BRANCH_NAME="${GITHUB_REF#refs/heads/}"
+          echo "Merging $BRANCH_NAME into dev..."
+
+          git fetch origin dev
+          git checkout dev
+          git merge origin/$BRANCH_NAME --no-ff -m "Auto-merge $BRANCH_NAME into dev"
+          git push origin dev
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Handle merge conflict
+        if: failure()
+        run: |
+          echo "::error::Merge conflict detected. Manual intervention required."
+          echo "Please manually merge the claude branch into dev."
