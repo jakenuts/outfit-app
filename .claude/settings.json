@@ -1,7 +1,7 @@
 {
   "instructions": ".claude/instructions.md",
   "hooks": {
-    "startup": [
+    "SessionStart": [
       {
         "command": "bash",
         "args": [".claude/startup.sh"]
