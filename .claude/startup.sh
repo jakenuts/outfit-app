@@ -4,6 +4,11 @@ log() {
     echo "[startup] $*"
 }
 
+if [ "${CLAUDE_CODE_REMOTE:-}" != "true" ]; then
+    log "Not running in Claude Code web environment; skipping installs"
+    exit 0
+fi
+
 ensure_vercel_cli() {
     if command -v vercel &> /dev/null; then
         log "Vercel CLI already installed"
@@ -47,6 +52,17 @@ ensure_github_cli() {
 
 ensure_vercel_cli
 ensure_github_cli
+
+if command -v check-tools &> /dev/null; then
+    if [ -n "${CLAUDE_TOOLS_LOG:-}" ]; then
+        check-tools > "${CLAUDE_TOOLS_LOG}" 2>&1
+        log "Wrote tool inventory to ${CLAUDE_TOOLS_LOG}"
+    else
+        log "Set CLAUDE_TOOLS_LOG to capture check-tools output"
+    fi
+else
+    log "check-tools not available; skipping tool inventory"
+fi
 
 # Verify VERCEL_TOKEN is set
 if [ -z "${VERCEL_TOKEN:-}" ]; then

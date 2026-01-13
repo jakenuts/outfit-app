@@ -8,13 +8,15 @@ The `startup.sh` script automatically:
 - Installs Vercel CLI globally if not present
 - Installs GitHub CLI globally if not present
 - Verifies that VERCEL_TOKEN is set
+- Optionally writes `check-tools` output when `CLAUDE_TOOLS_LOG` is set
 
 ## Environment Variables
 
-You need to set the following environment variable in your Claude Code settings:
+You need to set the following environment variables in your Claude Code settings:
 
 **VERCEL_TOKEN** - Your Vercel authentication token
 **GH_TOKEN** (optional) - GitHub CLI authentication token
+**CLAUDE_TOOLS_LOG** (optional) - File path to write `check-tools` output
 
 ### How to Set Environment Variables in Claude Code
 
