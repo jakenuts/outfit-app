@@ -23,4 +23,4 @@ This project uses:
 - Tailwind CSS
 - pnpm as the package manager
 
-The startup hook automatically installs Vercel CLI on cloud instances.
+The startup hook automatically installs Vercel CLI and GitHub CLI on cloud instances.

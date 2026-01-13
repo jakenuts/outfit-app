@@ -6,6 +6,7 @@ This directory contains startup hooks and configuration for Claude Code cloud in
 
 The `startup.sh` script automatically:
 - Installs Vercel CLI globally if not present
+- Installs GitHub CLI globally if not present
 - Verifies that VERCEL_TOKEN is set
 
 ## Environment Variables
@@ -13,6 +14,7 @@ The `startup.sh` script automatically:
 You need to set the following environment variable in your Claude Code settings:
 
 **VERCEL_TOKEN** - Your Vercel authentication token
+**GH_TOKEN** (optional) - GitHub CLI authentication token
 
 ### How to Set Environment Variables in Claude Code
 
