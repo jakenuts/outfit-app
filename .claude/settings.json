@@ -1,4 +1,5 @@
 {
+  "instructions": ".claude/instructions.md",
   "hooks": {
     "startup": [
       {
