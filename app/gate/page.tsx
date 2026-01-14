@@ -50,21 +50,15 @@ export default function GatePage() {
   return (
     <div className="relative min-h-screen">
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-[length:90%_auto] bg-[position:center_40%] bg-no-repeat md:bg-cover md:bg-center"
         style={{ backgroundImage: 'url(/images/castle-gate.png)' }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/70" />
       <div className="relative z-10 flex min-h-screen items-center justify-center px-6 py-12">
-        <div className="w-full max-w-xl rounded-[32px] border border-white/30 bg-white/10 p-8 text-white shadow-[0_30px_60px_-40px_rgba(0,0,0,0.7)] backdrop-blur">
-          <p className="text-xs uppercase tracking-[0.4em] text-white/70">
-            Wardrobe Gate
-          </p>
-          <h1 className="mt-4 text-3xl font-semibold md:text-4xl">
+        <div className="w-full max-w-md rounded-[28px] border border-white/30 bg-white/10 p-6 text-white shadow-[0_30px_60px_-40px_rgba(0,0,0,0.7)] backdrop-blur md:p-8">
+          <h1 className="text-3xl font-semibold md:text-4xl">
             The wardrobe awaits.
           </h1>
-          <p className="mt-3 text-sm text-white/80">
-            Enter the passphrase to unlock outfit generation.
-          </p>
 
           <form onSubmit={handleSubmit} className="mt-8 space-y-5">
             <div className="space-y-2">
