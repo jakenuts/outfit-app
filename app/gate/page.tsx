@@ -50,7 +50,7 @@ export default function GatePage() {
   return (
     <div className="relative min-h-screen">
       <div
-        className="absolute inset-0 bg-[length:90%_auto] bg-[position:center_40%] bg-no-repeat md:bg-cover md:bg-center"
+        className="absolute inset-0 bg-cover bg-[position:center_35%] md:bg-center"
         style={{ backgroundImage: 'url(/images/castle-gate.png)' }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/70" />
