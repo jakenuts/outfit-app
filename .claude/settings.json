@@ -1,10 +1,15 @@
 {
   "instructions": ".claude/instructions.md",
   "hooks": {
-    "startup": [
+    "SessionStart": [
       {
-        "command": "bash",
-        "args": [".claude/startup.sh"]
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/startup.sh\""
+          }
+        ]
       }
     ]
   }
