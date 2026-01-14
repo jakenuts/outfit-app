@@ -74,7 +74,7 @@ export default function GatePage() {
                 type="password"
                 value={password}
                 onChange={(event) => setPassword(event.target.value)}
-                className="w-full rounded-full border border-white/40 bg-white/15 px-5 py-3 text-sm text-white outline-none placeholder:text-white/50 focus:border-white"
+                className="w-full rounded-full border border-white/40 bg-white/15 px-5 py-3 text-base text-white outline-none placeholder:text-white/50 focus:border-white"
                 placeholder="Enter access key"
                 autoComplete="current-password"
               />
