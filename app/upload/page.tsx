@@ -105,6 +105,12 @@ export default function UploadPage() {
             >
               Back to Generator
             </Link>
+            <Link
+              href="/wardrobe"
+              className="rounded-full border border-black/10 bg-white/80 px-5 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-[color:var(--ink)] transition hover:-translate-y-0.5"
+            >
+              Wardrobe Manager
+            </Link>
           </div>
         </header>
 

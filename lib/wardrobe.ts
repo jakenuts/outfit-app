@@ -1,4 +1,6 @@
-export type ClothingType = 'tops' | 'bottoms' | 'shoes';
+export const clothingTypeIds = ['tops', 'bottoms', 'shoes'] as const;
+
+export type ClothingType = (typeof clothingTypeIds)[number];
 
 export type WardrobeItem = {
   url: string;
@@ -27,6 +29,10 @@ export const clothingTypes: Array<{
     description: 'Sneakers, boots, heels.',
   },
 ];
+
+export function isClothingType(value: string): value is ClothingType {
+  return (clothingTypeIds as readonly string[]).includes(value);
+}
 
 export const wardrobePrefix = 'clothes';
 
